@@ -1,3 +1,169 @@
+.paddingX {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.paddingY {
+  padding-top: 3rem;
+  padding-bottom: 5.5rem;
+}
+.paddingY16 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.title {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.title-normal {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.title-big {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+.title-regular-normal {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.body {
+  font-family: sourcePro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.body-regular-normal {
+  font-family: sourcePro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.body-regular-small {
+  font-family: sourcePro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.body-bold-small {
+  font-family: sourcePro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.body-body-normal {
+  font-family: sourcePro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.header {
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+.header__logo {
+  display: flex;
+  flex-direction: column;
+}
+.header__logo h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+.header__logo h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header__menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+.header__menu__item {
+  border-bottom: 2px solid transparent;
+  transition: border 0.5s ease;
+}
+.header__menu__item a {
+  text-decoration: none;
+  color: #fff;
+  font-family: sourcePro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.header__menu__item:hover {
+  border-bottom: 2px solid #ffaf47;
+  transition: border 0.3s ease;
+}
+.menu-mobile {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px;
+  font-size: 2rem;
+  border: none;
+  display: none;
+}
+@media screen and (max-width:767px) {
+  .header {
+    position: relative;
+  }
+  .header__menu {
+    border-radius: 4px;
+    flex-direction: column;
+    background-color: #f58b00;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    top: -300%;
+    display: flex;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+  .header__menu__item:hover {
+    border-color: #fff;
+  }
+  .header__menu--is-active {
+    display: flex;
+    top: 90%;
+  }
+  .menu-mobile {
+    display: block;
+  }
+}
+@font-face {
+  font-family: sourcePro;
+  src: url("../../assets/fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: sourcePro;
+  src: url("../../assets/fonts/source-sans-pro/SourceSansPro-Bold.ttf");
+  font-weight: bold;
+}
 * {
-  background-color: blue;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sourcePro;
+  font-weight: 400;
 }

@@ -1,0 +1,92 @@
+@import "colors";
+@import "spacing";
+@import "fonts";
+@import "breakpoints";
+
+.header {
+  background-color: @colorDark;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: @colorLight;
+  .paddingX();
+  .paddingY16();
+  width: 100%;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      .title-big();
+    }
+    h4 {
+      .title-regular-normal();
+    }
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+
+    &__item {
+      border-bottom: 2px solid transparent;
+      transition: border 0.5s ease;
+
+      a {
+        text-decoration: none;
+        color: @colorLight;
+        .body-regular-normal();
+      }
+
+      &:hover {
+        border-bottom: 2px solid @colorSecundary;
+        transition: border 0.3s ease;
+      }
+    }
+  }
+}
+
+.menu-mobile {
+  background-color: transparent;
+  color: @colorLight;
+  padding: 8px;
+  font-size: 2rem;
+  border: none;
+  display: none;
+}
+
+@media screen and (@breakpointmobile) {
+  .header {
+    position: relative;
+
+    &__menu {
+      border-radius: 4px;
+      flex-direction: column;
+      background-color: @colorPrimary;
+      padding: 16px;
+      position: absolute;
+      right: 0;
+      top: -300%;
+      display: flex;
+      transition: all 0.3s ease;
+      z-index: 99;
+
+      &__item {
+        &:hover {
+          border-color: @colorLight;
+        }
+      }
+
+      &--is-active {
+        display: flex;
+        top: 90%;
+      }
+    }
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+}
