@@ -1,4 +1,9 @@
+@import "fonts";
+@import "colors";
 @import "header";
+@import "about";
+@import "reviews";
+@import "curiosities";
 
 @font-face {
   font-family: sourcePro;
@@ -18,4 +23,21 @@
   box-sizing: border-box;
   font-family: sourcePro;
   font-weight: 400;
+}
+
+.title-section {
+  display: inline-block;
+
+  &__text {
+    .title-big();
+    color: @colorDark;
+  }
+
+  &__line {
+    width: 100%;
+    height: 3px;
+    background-color: @colorPrimary;
+    margin-top: 1px;
+    margin-bottom: @spacing16;
+  }
 }

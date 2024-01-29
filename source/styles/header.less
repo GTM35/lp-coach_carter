@@ -9,9 +9,11 @@
   align-items: center;
   justify-content: space-between;
   color: @colorLight;
-  .paddingX();
-  .paddingY16();
+  padding: @spacing16 @spacing40;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 
   &__logo {
     display: flex;
@@ -37,7 +39,7 @@
       a {
         text-decoration: none;
         color: @colorLight;
-        .body-regular-normal();
+        .body-bold-normal();
       }
 
       &:hover {
@@ -59,12 +61,14 @@
 
 @media screen and (@breakpointmobile) {
   .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    padding: @spacing16;
 
     &__menu {
       border-radius: 4px;
       flex-direction: column;
-      background-color: @colorPrimary;
+      background-color: @colorSecundary;
       padding: 16px;
       position: absolute;
       right: 0;

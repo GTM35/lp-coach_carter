@@ -1,0 +1,41 @@
+#curiosities {
+  padding: @spacing48 @spacing40 @spacing88;
+}
+
+.curiosities-container {
+  display: flex;
+  gap: 32px;
+}
+
+.curiosity {
+  width: 100%;
+  max-width: 426px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  padding: @spacing16 32px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+    }
+    &__icon {
+      margin-top: -5px;
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__description {
+    p {
+    }
+  }
+}
