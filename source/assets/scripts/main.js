@@ -27,9 +27,9 @@ function cardAnimation() {
           "curiosity__description--is-active"
         )
       ) {
-        el.target.setAttribute("src", "./source/images/icon-.svg");
+        el.target.setAttribute("src", "./dist/images/icon-.svg");
       } else {
-        el.target.setAttribute("src", "./source/images/icon+.svg");
+        el.target.setAttribute("src", "./dist/images/icon+.svg");
       }
     });
   });
