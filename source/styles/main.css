@@ -116,7 +116,7 @@
   .header {
     position: sticky;
     top: 0;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .header__menu {
     border-radius: 4px;
@@ -214,7 +214,7 @@
 @media screen and (max-width:767px) {
   #about {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   #about .sinopse .title-section {
     margin-top: 0;
@@ -298,7 +298,7 @@
 }
 @media screen and (max-width:767px) {
   #reviews {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .reviews {
     gap: 32px;
@@ -315,34 +315,106 @@
     gap: 2.5rem;
   }
 }
+@keyframes cardAnimation {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes cardAnimationExit {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
 #curiosities {
   padding: 3rem 2.5rem 5.5rem;
 }
 .curiosities-container {
   display: flex;
   gap: 32px;
+  padding-left: 1rem;
 }
 .curiosity {
-  width: 100%;
-  max-width: 426px;
   background-color: #ccc;
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: center;
   padding: 1rem 32px;
+  background-color: #292929;
+  border-radius: 8px;
+  height: fit-content;
+  width: 426px;
+  margin-top: 2.5rem;
 }
 .curiosity__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.curiosity__header__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: #fff;
+}
 .curiosity__header__icon {
-  margin-top: -5px;
   padding: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
 }
 .curiosity__header__icon img {
   width: 100%;
+}
+.curiosity__description {
+  display: none;
+  animation-name: cardAnimationExit;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.curiosity__description p {
+  color: #fff;
+  font-family: sourcePro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.curiosity__description--is-active {
+  display: block;
+  animation-name: cardAnimation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+@media screen and (max-width:767px) {
+  #curiosities {
+    padding: 0.5rem;
+  }
+  .curiosities-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+  }
+  .curiosity {
+    width: 100%;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+  #curiosities {
+    padding: 1rem 1rem 2.5rem;
+  }
 }
 @font-face {
   font-family: sourcePro;

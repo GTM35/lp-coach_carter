@@ -1,3 +1,25 @@
+@keyframes cardAnimation {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes cardAnimationExit {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
+
 #curiosities {
   padding: @spacing48 @spacing40 @spacing88;
 }
@@ -5,17 +27,21 @@
 .curiosities-container {
   display: flex;
   gap: 32px;
+  padding-left: @spacing16;
 }
 
 .curiosity {
-  width: 100%;
-  max-width: 426px;
   background-color: #ccc;
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: center;
   padding: @spacing16 32px;
+  background-color: @colorDark;
+  border-radius: 8px;
+  height: fit-content;
+  width: 426px;
+  margin-top: @spacing40;
 
   &__header {
     display: flex;
@@ -23,10 +49,17 @@
     align-items: center;
 
     &__title {
+      .title-normal();
+      color: @colorLight;
     }
+
     &__icon {
-      margin-top: -5px;
       padding: 0;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
 
       img {
         width: 100%;
@@ -35,7 +68,43 @@
   }
 
   &__description {
+    display: none;
+    animation-name: cardAnimationExit;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+
     p {
+      color: @colorLight;
+      .body-regular-normal();
     }
+
+    &--is-active {
+      display: block;
+      animation-name: cardAnimation;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+    }
+  }
+}
+
+@media screen and (@breakpointmobile) {
+  #curiosities {
+    padding: @spacing8;
+  }
+
+  .curiosities-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: @spacing8;
+  }
+
+  .curiosity {
+    width: 100%;
+  }
+}
+
+@media screen and (@breakpointtablet) and (@breakpointlaptop) {
+  #curiosities {
+    padding: @spacing16 @spacing16 @spacing40;
   }
 }
