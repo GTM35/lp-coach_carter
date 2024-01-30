@@ -497,19 +497,20 @@
     padding: 0 0.5rem;
   }
   #rodape p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
-@font-face {
+/* @font-face {
   font-family: sourcePro;
-  src: url("../../assets/fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+  src: url("../../../dist/fonts/source-sans-pro/SourceSansPro-Regular.ttf");
   font-weight: 400;
 }
+
 @font-face {
   font-family: sourcePro;
-  src: url("../../assets/fonts/source-sans-pro/SourceSansPro-Bold.ttf");
+  src: url("../../../dist/fonts/source-sans-pro/SourceSansPro-Bold.ttf");
   font-weight: bold;
-}
+} */
 * {
   padding: 0;
   margin: 0;

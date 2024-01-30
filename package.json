@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "grunt": "grunt"
+    "grunt": "grunt",
+    "build": "grunt"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "grunt-cli": "^1.4.3",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
     "grunt-contrib-watch": "^1.1.0",
     "less": "^4.2.0"
   },
