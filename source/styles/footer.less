@@ -1,0 +1,22 @@
+#rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  background-color: @colorDark;
+  height: 80px;
+
+  p {
+    color: @colorLight;
+    .body-bold-normal();
+  }
+}
+
+@media screen and (@breakpointmobile) {
+  #rodape {
+    padding: 0 @spacing8;
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}

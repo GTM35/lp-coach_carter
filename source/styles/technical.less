@@ -1,0 +1,63 @@
+#technical-details {
+  padding: @spacing48 @spacing40 @spacing88;
+  background-color: @colorPrimary;
+}
+
+#technical-details .title-section {
+  &__line {
+    background-color: @colorLight;
+  }
+}
+
+.technical-list {
+  width: 100%;
+  max-width: 345px;
+  color: @colorLight;
+  padding-left: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: @spacing16;
+  margin-top: @spacing40;
+
+  &__item {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__text1 {
+      .body-bold-normal();
+    }
+    &__text2 {
+      .body-regular-small();
+      color: #000;
+      text-align: left;
+      width: 135px;
+    }
+  }
+}
+
+@media screen and (@breakpointmobile) {
+  #technical-details {
+    padding: @spacing8;
+  }
+
+  .technical-list {
+    padding-left: 25px;
+    margin: 24px 0;
+  }
+
+  .title-section {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (@breakpointtablet) and (@breakpointlaptop) {
+  #technical-details {
+    padding: @spacing16 @spacing16 @spacing40;
+  }
+
+  .technical-list {
+    margin: 16px 0;
+  }
+}
